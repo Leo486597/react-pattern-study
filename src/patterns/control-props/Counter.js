@@ -4,10 +4,12 @@ import { CounterProvider } from "./useCounterContext";
 import { Count, Label, Decrement, Increment } from "./components";
 
 function Counter({ children, value = null, initialValue = 0, onChange }) {
+  // second level control of the count state
   const [count, setCount] = useState(initialValue);
 
   const isControlled = value !== null && !!onChange;
 
+  // determine get from parent or itself
   const getCount = () => (isControlled ? value : count);
 
   const firstMounded = useRef(true);
@@ -27,6 +29,7 @@ function Counter({ children, value = null, initialValue = 0, onChange }) {
   };
 
   const handleCountChange = (newValue) => {
+    // if is controlled, call the callback, otherwise control by itself
     isControlled ? onChange(newValue) : setCount(newValue);
   };
 

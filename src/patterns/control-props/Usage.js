@@ -4,6 +4,7 @@ import { Counter } from "./Counter";
 function Usage() {
   const [count, setCount] = useState(0);
 
+  // first level control of the count state
   const handleChangeCounter = (newCount) => {
     setCount(newCount);
   };

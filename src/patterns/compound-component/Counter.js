@@ -4,6 +4,7 @@ import { CounterProvider } from "./useCounterContext";
 import { Count, Label, Decrement, Increment } from "./components";
 
 function Counter({ children, onChange, initialValue = 0 }) {
+  // the state of the count is not been controlled outside
   const [count, setCount] = useState(initialValue);
 
   const firstMounded = useRef(true);
