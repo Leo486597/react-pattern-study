@@ -5,6 +5,8 @@ import { useCounter } from "./useCounter";
 
 const MAX_COUNT = 10;
 function Usage() {
+  // cutomized reducer
+  // state, action => newState
   const reducer = (state, action) => {
     switch (action.type) {
       case "decrement":
@@ -12,10 +14,12 @@ function Usage() {
           count: Math.max(0, state.count - 2) //The decrement delta was changed for 2 (Default is 1)
         };
       default:
+        // by default get from useConter helper function
         return useCounter.reducer(state, action);
     }
   };
 
+  // default state and reducer is in useCounter
   const { count, handleDecrement, handleIncrement } = useCounter(
     { initial: 0, max: 10 },
     reducer

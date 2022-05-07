@@ -16,6 +16,9 @@ const internalReducer = ({ count }, { type, payload }) => {
 };
 
 function useCounter({ initial, max }, reducer = internalReducer) {
+  // useReducer return the state object and dispatch fuction
+  // dispatch function will in charge of handling event with {type and playload} provide
+  // dispatch the event to the reducer
   const [{ count }, dispatch] = useReducer(reducer, { count: initial });
 
   const handleIncrement = () => {
