@@ -8,6 +8,7 @@ function CounterProvider({ children, value }) {
   );
 }
 
+// use context to passing through value
 function useCounterContext() {
   const context = React.useContext(CounterContext);
   if (context === undefined) {

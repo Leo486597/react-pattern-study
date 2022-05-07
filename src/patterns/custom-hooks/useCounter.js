@@ -11,6 +11,7 @@ function useCounter(intialeCount) {
     setCount((prevCount) => Math.max(0, prevCount - 1));
   };
 
+  // expose the default handlers 
   return { count, handleIncrement, handleDecrement };
 }
 
