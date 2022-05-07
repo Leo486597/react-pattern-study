@@ -15,6 +15,8 @@ function useCounter({ initial, max }) {
     setCount((prevCount) => Math.max(0, prevCount - 1));
   };
 
+  // default props for Counter components
+  // props getter helper functions to free user hand on getting default props
   //props getter for 'Counter'
   const getCounterProps = ({ ...otherProps } = {}) => ({
     value: count,
