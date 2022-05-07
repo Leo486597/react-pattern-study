@@ -24,6 +24,7 @@ function Counter({ children, onChange, initialValue = 0 }) {
   };
 
   return (
+    // pass value to conter provider
     <CounterProvider value={{ count, handleIncrement, handleDecrement }}>
       <StyledCounter>{children}</StyledCounter>
     </CounterProvider>

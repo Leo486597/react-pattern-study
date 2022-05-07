@@ -7,6 +7,8 @@ function Usage() {
   };
 
   return (
+    // component compound pattern
+    // decoupled the counter component to 4 components, which provide high flexibility
     <Counter onChange={handleChangeCounter}>
       <Counter.Decrement icon="minus" />
       <Counter.Label>Counter</Counter.Label>

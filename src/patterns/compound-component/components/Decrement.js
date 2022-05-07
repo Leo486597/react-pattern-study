@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCounterContext } from "../useCounterContext";
 
 function Decrement({ icon = "minus" }) {
+  // retrive handler from counter context
   const { handleDecrement } = useCounterContext();
   return (
     <StyledButton onClick={handleDecrement}>
